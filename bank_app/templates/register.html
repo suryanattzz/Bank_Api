@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action=>
+            {{ form.csrf_token }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Register Your Account</legend>
+                
+                <div class="form-group">
+                    {{ form.username.label (class="form-control-label")}}
+                    {% if form.username.errors %} 
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input class="form-control form-control-lg" name="username" placeholder="Enter The Name">
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %} 
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input class="form-control form-control-lg" name="email" placeholder="Enter Your Email ID">
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.aadhaar_number.label(class="form-control=label") }} 
+                    {% if form.aadhaar_number.errors %} 
+                        {{ form.aadhaar_number(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.aadhaar_number.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input class="form-control form-control-lg" name="aaahaar_no" placeholder="Enter Your Aadhaar Number">
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.acc_type.label(class="form-control=label") }}
+                    {% if form.acc_type.errors %}
+                        {{ form.acc_type(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.acc_type.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.acc_type(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.deposit.label (class="form-control=label")}}
+                    {% if form.deposit.errors %} 
+                        {{ form.deposit(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.deposit.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input class="form-control form-control-lg" name="deposit" placeholder="Enter The Amount To Be Deposited">
+                    {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    {{ form.pin.label (class="form-control=label")}}
+                    {% if form.pin.errors %} 
+                        {{ form.pin(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.pin.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input class="form-control form-control-lg" name="pin" placeholder="Enter PIN">
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label(class="form-control=label") }} 
+                    {% if form.password.errors %} 
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input type="password" class="form-control form-control-lg" name="password" placeholder="Enter The Passowrd">
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                {{ form.confirm_password.label(class="form-control=label")  }}
+                    {% if form.confirm_password.errors %} 
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input type="password" class="form-control form-control-lg" name="confirm_password" placeholder="ReEnter The Password">
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+            {{ form.submit (class="btn btn-outline-info") }}
+            </div>
+        </form>
+        
+        
+
+    </div>
+    <div class ="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{{ url_for('users.login')}}">Sign IN</a>
+        </small>
+
+    </div>
+    
+{% endblock content %}

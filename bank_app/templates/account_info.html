@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section">
+  <legend class="border-bottom mb-4">Account Info</legend>
+
+  <div class="media">
+    <img class="rounded-circle account-img" src="{{ image_file }}" alt="Profile Image">
+    <div class="media-body">
+      <h2 class="account-heading">{{ current_user.username }}</h2>
+      <h2>Account No: {{ current_user.account_no }}</h2>
+      <div class="mt-4">
+        <h5 class="mb-3">Account Type: {{ user.acc_type }}</h5>
+        <h5 class="mb-3">Aaahaar Number: {{ user.aaahaar_no }}</h5>
+        <h5 class="mb-3">Email: {{ user.email }}</h5>
+        <h5 class="mb-3">Pin: {{ user.pin }}</h5>
+        <h5 class="mb-3">Balance-- {{ user.balance }} Ruppees</h5>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

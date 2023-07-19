@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section">
+    <h1 class="display-4 mb-4">Welcome to Flask Bank App!</h1>
+    <p  class="home-paragraph">
+        This is the home page of our Bank App. You can view your account information, deposit and withdraw money, and perform various banking transactions using this app.
+    </p>
+    {% if current_user.is_authenticated %}
+    <p  class="home-paragraph">
+        You are currently logged in as  <strong>{{ current_user.username }}</strong>. You can access your account details and other features through the navigation bar above.
+    </p>
+    {% else %}
+    <p  class="home-paragraph">
+        If you are an existing user, you can log in to your account or if you are a new user, you can register to create an account and access our banking services.
+    </p>
+    {% endif %}
+</div>
+{% endblock %}

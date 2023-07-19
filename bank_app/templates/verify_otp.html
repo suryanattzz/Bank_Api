@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.csrf_token }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">OTP Verification</legend>
+                
+                <div>
+                    {{ form.otp.label(class="form-control-label") }}
+                    {% if form.otp.errors %} 
+                        {{ form.otp(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.otp.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input class="form-control form-control-lg" name="otp" placeholder="Enter The OTP">
+                    {% endif %}
+                </div>
+                
+               
+            </fieldset>
+            <div class="form-group">
+            {{ form.submit (class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    
+{% endblock content %}

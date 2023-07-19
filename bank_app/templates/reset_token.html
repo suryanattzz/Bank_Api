@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.csrf_token }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Reset Passowrd</legend>
+                
+                <div>
+                    {{ form.password.label(class="form-control-label") }}
+                    {% if form.password.errors %} 
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input type="password" class="form-control form-control-lg" name="password" placeholder="Enter The Passowrd">
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    {% if form.confirm_password.errors %} 
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <input type="password" class="form-control form-control-lg" name="confirm_password" placeholder="ReEnter The Password">
+                    {% endif %}
+                </div>
+                
+               
+            </fieldset>
+            <div class="form-group">
+            {{ form.submit (class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    
+{% endblock content %}

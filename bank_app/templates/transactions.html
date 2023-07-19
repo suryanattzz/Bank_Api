@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section">
+  <legend class="border-bottom mb-4">Account Info</legend>
+
+  <div class="media">
+    <img class="rounded-circle account-img" src="{{ image_file }}" alt="Profile Image">
+    <div class="media-body">
+      <h2 class="account-heading">{{ current_user.username }}</h2>
+      <h2>Account No: {{ current_user.account_no }}</h2>
+      <div class="mt-4">
+        <h5 class="mb-3">Account Type  -- {{ current_user.acc_type }}</h5>
+        <h5 class="mb-3">Aadhaar Number -- {{ current_user.aaahaar_no }}</h5>
+        <h5 class="mb-3">Current Balance -- {{ current_user.balance }} Ruppees</h5>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 class="mb-3">Transactions</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Date Of Transaction</th>
+        <th>Deposit</th>
+        <th>Withdraw</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for transaction in user %}
+        <tr>
+          <td class="column-spacing">{{ loop.index  }}</td>
+          <td class="column-spacing">{{ transaction.date_posted }}</td>
+          <td class="column-spacing">{{ transaction.deposit }}</td>
+          <td class="column-spacing">{{ transaction.withdraw }}</td>
+          <td class="column-spacing">{{ transaction.balance }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    
+  </table>
+  <!-- Pagination -->
+    <div class="pagination">
+        {% for page_num in user.iter_pages( left_edge=1 ,right_edge=1 ,left_current=1 ,right_current=2 ) %}
+        {% if page_num %}
+          {% if user.page==page_num %}
+          <a class="btn btn-info mb-4" href="{{ url_for('services.transactions',page=page_num)}}">{{ page_num }}</a>
+          {% else %}
+          <a class="btn btn-outline-info mb-4" href="{{ url_for('services.transactions',page=page_num)}}">{{ page_num }}</a>
+          {% endif %}
+        {% else %}
+          ...
+        {% endif %}
+  
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+:root {
+  --text-color: #e9eaee;
+  --link-color: #191261;
+  --background-color: #0c0b0b;
+}
+
+body {
+    background: var(--background-color);
+    color: #f8e7e7;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+
+  .home-paragraph {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #f1ecec;
+}
+  
+  .bg-steel {
+    background-color: #d15711;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #07090a;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #181616;
+    padding: 1px;
+    border: 1px solid #f0dcdc;
+    border-radius: 1px;
+    margin-bottom: 5px;
+  }
+  
+  .article-title {
+    color: #0a275f;
+  }
+  
+  a.article-title:hover {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #f1e9e9;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+  .column-spacing {
+    padding: 20px; /* Adjust the padding value as desired */
+  }
