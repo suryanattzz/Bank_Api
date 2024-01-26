@@ -56,10 +56,10 @@ Flask Bank App is a simple web application built with Flask, a lightweight web f
 Include screenshots or gifs showcasing different functionalities of your Flask Bank App.
 
 ![Screenshot 1](screenshots/Screenshot_2.png)
-*Caption for Screenshot 1*
+*Home Page Of the App*
 
 ![Screenshot 2](screenshots/Screenshot_1.png)
-*Caption for Screenshot 2*
+*Login page of the App
 
 
 
