@@ -1,31 +1,23 @@
 # Flask Bank App
 
-## Introduction
-
 Flask Bank App is a simple web application built with Flask, a lightweight web framework in Python. It allows users to manage their bank accounts online, perform transactions, and check their account balance and transaction history.
 
 ## Features
 
-- **User Authentication**: Secure user registration and login system.
-- **Account Management**: View account details, change password, and update personal information.
-- **Transactions**: Perform transactions such as deposit and withdrawal.
-- **Account Balance**: Check the current balance in the account.
-- **Transaction History**: View a list of past transactions.
+- **Account Management**: Users can create accounts, view account details, and update account information.
 
-## Technologies Used
+- **Transactions**: Perform transactions such as deposits, withdrawals, and fund transfers.
 
-- **Flask**: A micro web framework written in Python.
-- **SQLite**: A lightweight, serverless database engine.
-- **HTML/CSS**: For frontend development.
-- **Bootstrap**: A popular CSS framework for building responsive and mobile-first websites.
-- **Jinja2**: A template engine for Python used with Flask for dynamic web pages.
+- **Balance Inquiry**: Check account balance in real-time.
+
+- **Transaction History**: View a list of transactions with details.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.x
-- Flask (`pip install flask`)
+- Python 3.x installed on your machine.
+- [Virtualenv](https://pypi.org/project/virtualenv/) for creating a virtual environment.
 
 ### Installation
 
@@ -36,29 +28,46 @@ Flask Bank App is a simple web application built with Flask, a lightweight web f
     cd flask-bank-app
     ```
 
-2. Install dependencies:
+2. Create and activate a virtual environment:
+
+    ```bash
+    virtualenv venv
+    source venv/bin/activate  # For Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Run the application:
+### Usage
+
+1. Run the Flask app:
 
     ```bash
     python app.py
     ```
 
-4. Open your browser and go to `http://localhost:5000`.
+2. Open your browser and go to [http://localhost:5000/](http://localhost:5000/).
 
-## Usage
+## Screenshots
 
-1. Register for a new account or log in with existing credentials.
-2. Navigate through the dashboard to manage your account and perform transactions.
-3. Log out when you're done.
+Include screenshots or gifs showcasing different functionalities of your Flask Bank App.
+
+![Screenshot 1](screenshots/screenshot1.png)
+*Caption for Screenshot 1*
+
+![Screenshot 2](screenshots/screenshot2.png)
+*Caption for Screenshot 2*
 
 ## Contributing
 
-Feel free to contribute to the project by opening issues or submitting pull requests. Follow the [Contributing Guidelines](CONTRIBUTING.md) for more details.
+If you'd like to contribute to this project, please follow the [Contributing Guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
