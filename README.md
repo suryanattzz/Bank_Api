@@ -24,7 +24,7 @@ Flask Bank App is a simple web application built with Flask, a lightweight web f
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/flask-bank-app.git
+    git clone https://github.com/suryanattzz/flask-bank-app.git
     cd flask-bank-app
     ```
 
