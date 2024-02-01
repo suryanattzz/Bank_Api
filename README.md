@@ -1,6 +1,6 @@
 # Bank Api
 
-Bank App is a simple web application built with Flask, a lightweight web framework in Python. It allows users to manage their bank accounts online, perform transactions, and check their account balance and transaction history.
+This Bank App is a simple web application built with Flask, a lightweight web framework in Python. It allows users to manage their bank accounts online, perform transactions, and check their account balance and transaction history.
 
 ## Features
 
