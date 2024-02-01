@@ -46,7 +46,7 @@ This Bank App is a simple web application built with Flask, a lightweight web fr
 1. Run the Flask app:
 
     ```bash
-    python app.py
+    python run.py
     ```
 
 2. Open your browser and go to [http://localhost:5000/](http://localhost:5000/).
